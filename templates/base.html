@@ -9,21 +9,20 @@
   <!--[if IE]>
   <link rel="stylesheet" href="/css/blueprint/ie.css" type="text/css" media="screen, projection" />
   <![endif]-->
-  <link rel="stylesheet" href="/css/main.css" type="text/css"/> 
+  <link rel="stylesheet" href="/css/main.css" type="text/css"/>
+    <link rel="stylesheet" href="/css/inlineplayer.css" type="text/css"/> 
+
   <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
   <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.7.3/jquery-ui.min.js"></script>
   <script type="text/javascript" src="/js/main.js"></script>
   <script type="text/javascript" src="/js/jquery.jeditable.js"></script>
   <script type="text/javascript" src="/js/jquery.idle-timer.js"></script>
-  <script type="text/javascript" src="/js/jquery.sound.js"></script>
-  <script type="text/javascript" src="/js/audio-player.js"></script>  
+  <script type="text/javascript" src="/js/jquery.favicon.js"></script>
+  <script type="text/javascript" src="/js/soundmanager2.js"></script>
+  <script type="text/javascript" src="/js/inlineplayer.js"></script>  
   <script type="text/javascript" src="/js/plupload/gears_init.js"></script>
   <script type="text/javascript" src="/js/plupload/plupload.full.min.js"></script>
-  <script type="text/javascript">  
-      AudioPlayer.setup("/js/player.swf", {  
-          width: 290  
-      });  
-  </script>
+  
   {% block head_extra %}{% endblock %}
   <title>{% block title %}Main Page{% endblock %}</title>
 </head>
@@ -43,6 +42,8 @@
       {% block script %}{% endblock %}
     });
   </script>
+<div id="sm2-container" style="position:absolute;left:-999px;top:-999px;">
+</div>
 </body>
 
 </html>

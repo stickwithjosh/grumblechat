@@ -25,7 +25,7 @@ var chat = function() {
     var $msg_template;
     var $text_entry_content;
 
-    var idleTime = 120000; // 2 minutes
+    var idleTime = 60000; // 1 minute
     var isIdle = false;
     var missedMessageCount = 0; // incremented when idle
 
@@ -178,9 +178,14 @@ var chat = function() {
                     
                     if ( isIdle )
                     {
-                        $.sound.play( '/sounds/message.wav' )
-                        ++missedMessageCount;
-                        document.title = '(' + missedMessageCount + ') ' + pristineTitle;
+                      soundManager.createSound({
+                        id:'message_alert',
+                        url:'/sounds/message.mp3'
+                      });
+                      soundManager.play('message_alert');
+                      ++missedMessageCount;
+                      document.title = '(' + missedMessageCount + ') ' + pristineTitle;
+                      jQuery.favicon('/images/grumblechat-activity.png');
                     }
                     
                 });
@@ -264,6 +269,7 @@ var chat = function() {
         isIdle = false;
         missedMessageCount = 0;
         document.title = pristineTitle;
+        jQuery.favicon('/images/grumblechat.png');
     }
 
     function initialize(the_room, the_account, upload_url, message_last_key) {
@@ -290,6 +296,8 @@ var chat = function() {
         uploader.bind('FilesAdded', function (up, files) {
             if (up.state != 2 && files.length > 0) up.start();
         });
+        
+
 
         // apply jquery hooks and behaviors
         $('#room-topic').editable('/api/room/' + room.key + '/topic', {
