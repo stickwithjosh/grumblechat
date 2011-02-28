@@ -8,15 +8,10 @@
 
 {% block content %}
 <div id="sidebar">
-    <h2 id="room-name">{{ room.name }}</h2>
-    <h3 id="room-topic" class="edit">{{ room.topic }}</h3>
-    <hr/>
     <div class="user-stuff">
-        <h3 id="room-users">Users:</h3>
-        <table id="userlist">
           {% for roomlisting in roomlist %}
           <tr id="user-{{ roomlisting.account.nickname }}">
-            <td>{{ roomlisting.account.gravatar_tag }}
+              <li>{{ roomlisting.account.gravatar_tag }}</li>
             {{ roomlisting.account.nickname }}</td>
           </tr>
           {% endfor %}
@@ -41,7 +36,8 @@
     <div id="settings">
         <a href="https://github.com/pfibiger/grumblechat/issues" target="_blank">Bug/Feature Request</a><br>
         <a href="/account/{{ account.key }}">My Settings</a>
-    </div>
+    </div
+</div>
 </div>
 <div class="superfluous-surrounding">
 <table id="chatlog">
@@ -56,6 +52,11 @@
     <input id="text-entry-content" type="text" name="content" autocomplete="off" placeholder="UR MSG HERE"/ autofocus>
   </div>
 </form>
+</div>
+
+
+<div id="footer">
+    <h3 id="room-topic" class="edit">{{ room.topic }}</h3>
 </div>
 
 {% endblock %}

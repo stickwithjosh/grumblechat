@@ -1,11 +1,14 @@
 {% extends "base.html" %}
 
 {% block content %}
+<div class="superfluous-surrounding">
+<div class="account">
 
     <h2>Gravatar: {{ account.gravatar_tag }}</h2>
     <h2>Account: {{ account.user.email }}</h2>
     <p>Nickname: {{ account.nickname }}</p>
     
     <p><a href="/">Home</a> | <a href="/room/">Rooms List</a></p>
-
+</div>
+</div>
 {% endblock %}

@@ -14,7 +14,7 @@ a {color: #3087e0;}
     z-index: -1;
 }
 
-#chatlog {
+.account, #chatlog {
     width: 100%;
     margin: 0;
     font-size: 120%;
@@ -139,7 +139,6 @@ h3#room-users {
 }
 
 #text-entry-content {
-
     background: #e3e3e3;
     margin-left: 5px;
     margin-right: 20px;
@@ -202,11 +201,86 @@ h3#room-users {
 }
 
 .superfluous-surrounding {
-    margin-bottom: 20px;
+    margin-bottom: 70px;
     min-width: 550px;
     margin-left: 20px;
     width: 800px;
     padding: 10px;
     padding-top: 0;
     background: url(/images/eightysixpercent.png)
+}
+
+#footer {
+    bottom: 0;
+    position: fixed;
+    height: 50px;
+    background: white;
+    border-top: 1px solid #646464;
+    width: 100%;
+    z-index: 100;
+}
+
+.account {background: #fff;}
+.account * {margin: 10px;}
+.account {padding-top: 10px;}
+.account form {overflow: auto;}
+
+@media screen and (min-width: 1300px) {
+    .superfluous-surrounding {width: 900px;}
+    #text-entry-content {width: 880px;}    
+}
+
+@media screen and (min-width: 1400px) {
+    .superfluous-surrounding {width: 1000px;}
+    #text-entry-content {width: 980px;}    
+}
+
+@media screen and (min-width: 1500px) {
+    .superfluous-surrounding {width: 1100px;}
+    #text-entry-content {width: 1080px;}    
+}
+
+@media screen and (min-width: 1600px) {
+    .superfluous-surrounding {width: 1200px;}
+    #text-entry-content {width: 1180px;}    
+}
+
+@media screen and (min-width: 1700px) {
+    .superfluous-surrounding {width: 1300px;}
+    #text-entry-content {width: 1280px;}    
+}
+
+@media screen and (min-width: 1800px) {
+    .superfluous-surrounding {width: 1400px;}
+    #text-entry-content {width: 1380px;}    
+}
+
+@media screen and (min-width: 1900px) {
+    .superfluous-surrounding {width: 1500px;}
+    #text-entry-content {width: 1480px;}    
+}
+
+@media screen and (min-width: 2000px) {
+    .superfluous-surrounding {width: 1600px;}
+    #text-entry-content {width: 1580px;}    
+}
+
+@media screen and (min-width: 2100px) {
+    .superfluous-surrounding {width: 1700px;}
+    #text-entry-content {width: 1680px;}    
+}
+
+@media screen and (min-width: 2200px) {
+    .superfluous-surrounding {width: 1700px;}
+    #text-entry-content {width: 1680px;}    
+}
+
+@media screen and (min-width: 2300px) {
+    .superfluous-surrounding {width: 1800px;}
+    #text-entry-content {width: 1780px;}    
+}
+
+@media screen and (min-width: 2400px) {
+    .superfluous-surrounding {width: 1900px;}
+    #text-entry-content {width: 1780px;}    
 }
